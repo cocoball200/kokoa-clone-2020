@@ -1,0 +1,18 @@
+.icon-low {
+  display: flex;
+  justify-content: space-between;
+}
+.icon-row__icon {
+  /* 수직으로 정렬할때 쓰임 */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icon-row__icon i {
+  font-size: 35px;
+  /* icon이더라도 사이즈 크게 할려면 폰트사이즈 */
+}
+.icon-row__icon span {
+  margin-top: 18px;
+}
