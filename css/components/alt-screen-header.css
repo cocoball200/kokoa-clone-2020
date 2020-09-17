@@ -1,0 +1,32 @@
+.alt-header {
+  display: flex;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  align-items: center;
+  justify-items: center;
+}
+
+.alt-header__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.alt-header__columns:first-child {
+  margin-right: auto;
+}
+.alt-header__columns:last-child {
+  margin-left: auto;
+}
+
+.settings__setting {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 20px;
+  font-size: 22px;
+}
