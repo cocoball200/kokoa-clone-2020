@@ -1,0 +1,29 @@
+#chat-screen {
+  background-color: #abc1d1;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #abc1d1;
+  box-sizing: border-box;
+  /* box-sizing:border-box 를 해야 밖에 나간 아이콘을
+안으로 들어오게 해준다. */
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+}
+
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+  /* z-index란 position에 fixed주고 하니가 레이어가 쌓인다
+  그래서 순서에 맞게 쌓아 올리기 위해서 z-index 처리를 해준다; */
+}
+
+.main-chat {
+  margin-top: 150px;
+}

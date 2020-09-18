@@ -16,4 +16,15 @@
 }
 .alt-header__columns:last-child {
   margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.alt-header__columns span:last-child {
+  margin-left: 20px;
+}
+.alt-header__columns {
+  width: 33%;
+}
+.alt-header__columns:nth-child(2) {
+  text-align: center;
 }
