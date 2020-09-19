@@ -1,4 +1,4 @@
-#no-mobile {
+/* #no-mobile {
   position: absolute;
   z-index: 99;
   height: 100vh;
@@ -11,18 +11,33 @@
   top: 0;
 }
 
-.no-mobile__columns {
-  background-color: #3b1e1f;
-  border-radius: 15%;
+.no-mobile__text {
   display: block;
-  align-items: center;
-  align-content: center;
   color: aliceblue;
-  opacity: 0.99;
-  padding: 60px;
+  font-size: 20px;
+  padding-bottom: 100px;
+  justify-content: center;
 }
+.no-mobile__columns .fa-comment {
+  display: block;
+  font-size: 400px;
+  color: #3b1e1f;
+  justify-content: center;
+  position: relative;
+}
+
+@keyframes hidenSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @media screen and (max-width: 645px) {
   #no-mobile {
     display: none;
   }
-}
+} */
