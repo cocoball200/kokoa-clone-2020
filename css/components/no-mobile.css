@@ -11,6 +11,16 @@
   top: 0;
 }
 
+.no-mobile__columns {
+  background-color: #3b1e1f;
+  border-radius: 15%;
+  display: block;
+  align-items: center;
+  align-content: center;
+  color: aliceblue;
+  opacity: 0.99;
+  padding: 60px;
+}
 @media screen and (max-width: 645px) {
   #no-mobile {
     display: none;
