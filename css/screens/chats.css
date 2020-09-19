@@ -1,5 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
+  height: 1000vh;
 }
 
 #chat-screen .alt-header,
@@ -24,11 +25,34 @@
   그래서 순서에 맞게 쌓아 올리기 위해서 z-index 처리를 해준다; */
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
-  margin-top: 150px;
+  margin-top: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.3s linear;
 }
 
 .chat__timestamp {
@@ -44,6 +68,7 @@
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  animation: fadeOut 1s linear;
 }
 
 .message-row--own {
@@ -100,6 +125,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -119,8 +145,10 @@
   padding: 14px;
   width: 100%;
   border: var(--main-border);
+  border-color: rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -150,4 +178,21 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+/* focus가 있으면 실행 elements가 있는지 확인  */
+.reply:focus-within .reply__column:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+.reply:focus-within {
+  transform: translateY(80px);
 }
